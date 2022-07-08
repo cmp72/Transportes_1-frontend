@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+.contenedor{
+  max-width:1200px;
+  margin: 0 auto;
+}
+h2{
+  color:rgb(114, 24, 231);
+  font-weight:400;
 }
