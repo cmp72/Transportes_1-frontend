@@ -1,3 +1,6 @@
+import "../layout/Footer";
+
+
 const Footer = (props) => {
     return (
 

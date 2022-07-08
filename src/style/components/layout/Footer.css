@@ -1,0 +1,14 @@
+footer {
+    background-color: rgb(23, 23, 109);
+    clear: right;
+    color: rgb(231, 157, 20);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+h2 {
+    /* color:rgb(251, 243, 243); */
+    font-weight: 50000;
+    margin-bottom: 10px;
+}
