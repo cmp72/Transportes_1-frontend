@@ -1,3 +1,6 @@
+import "../../style/"
+
+
 const HomePage = (props) => {
     return (
 

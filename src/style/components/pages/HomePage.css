@@ -1,0 +1,48 @@
+.bienvenidos {
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    background-color: orange;
+}
+
+.testimonios {
+    width: 20%;
+    background-color: rgb(45, 36, 202);
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    /*
+     Gap es un atributo que abre como una calle entre medio de 
+    las cajas de bienvenidos y testimonios */
+
+}
+
+.bienvenidos p {
+    font-size: 20px;
+}
+
+.testimonio .cita {
+    color: rgb(240, 22, 29);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    background-color: yellow;
+    display: block;
+
+}
+
+.testimonio .autor {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    background-color: lightcoral;
+    display: block;
+    /* en testimonio.cita y testimonio.autor se pone display block porque 
+sino queda el testimonio y el autor juntos, en las mismas líneas,
+de esta forma el testimonio queda arriba del autor del testimonio, separados
+ */
+    margin: 12px 0;
+}
