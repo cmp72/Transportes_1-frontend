@@ -1,4 +1,4 @@
-import "../layout/Footer";
+import "../../style/components/layout/Footer.css";
 
 
 const Footer = (props) => {
