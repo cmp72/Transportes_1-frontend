@@ -1,4 +1,4 @@
-import "../../style/"
+import "../style/components/pages/HomePage.css";
 
 
 const HomePage = (props) => {
@@ -7,6 +7,7 @@ const HomePage = (props) => {
         <div>HOME</div>
         
 
+        
         
     );
 }
