@@ -1,3 +1,5 @@
+
+import "../../src/style/components/pages/ContactoPage.css";
 const ContactoPage = (props) => {
     return (
 
