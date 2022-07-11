@@ -1,3 +1,5 @@
+import "../../src/style/components/pages/GaleriaPage.css";
+
 const GaleriaPage = (props) => {
     return (
         // <div>Galeria</div>
