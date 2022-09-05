@@ -1,36 +1,40 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import NovedadItem from '../components/novedades/NovedadItem';
+
+
+
+
 const NovedadesPage = (props) => {
+    const [loading, setLoading] = useState(false);
+    const [novedades, setNovedades] = useState([]);
+
+    useEffect(() => {
+        const cargarNovedades = async () => {
+            setLoading(true);
+            const response = await axios.get('http://localhost:3000/api/novedades');
+            setNovedades(response.data);
+            setLoading(false);
+        };
+        cargarNovedades();
+    }, []);
+
     return (
-        <main class="contenedor">
+        <section className="contenedor">
             <h2>Novedades</h2>
-            <div class="novedades">
-                <h3>TITULO</h3>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea id enim</p>
-                <hr />
-            </div>
+            {
+            loading ? (
+                <p>Cargando...</p>
 
-            <div class="novedades">
-                <h3>TITULO</h3>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea id enim
-                    voluptate dolores nemo doloremque voluptates aut adipisci commodi.
-                    Cum labore culpa inventore error quisquam aliquid soluta voluptates
-                    explicabo!</p>
-                <hr />
-            </div>
+            ) : (
+                novedades.map(item => <NovedadItem key={item.id}//item.id va item.Id?
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            )
+            }
+        </section>
 
-            <div class="novedades">
-                <h3>TITULO</h3>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea id enim
-                    voluptate dolores nemo doloremque voluptates aut adipisci commodi.
-                    Cum labore culpa inventore error quisquam aliquid soluta voluptates
-                    explicabo!</p>
-                <hr />
-            </div>
-
-        </main>
-    );
-}
+    )
+};
 
 export default NovedadesPage;
