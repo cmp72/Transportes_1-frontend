@@ -1,5 +1,5 @@
 
-import "../../src/style/components/pages/ContactoPage.css";
+import '../style/components/pages/ContactoPage.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -40,7 +40,7 @@ const ContactoPage = (props) => {
         <main className="contenedor contacto">
             <div>
                 <h2>Contacto Rápido</h2>
-                <form action="/contacto" method="post" className="formulario" onSubmit={handleSubmit} >
+                <form action="/contacto" method="post"  onSubmit={handleSubmit} className="formulario">
                     <p>
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
@@ -52,7 +52,7 @@ const ContactoPage = (props) => {
 
                     </p>
                     <p>
-                        <label for="number">Telefono</label>
+                        <label for="telefono">Telefono</label>
                         <input type="text" name="telefono" value={formData.telefono} onChange={handleChange} />
 
 
@@ -61,11 +61,12 @@ const ContactoPage = (props) => {
                         <label for="mensaje">Mensaje</label>
                         <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
                     </p>
-                    {sending ? <p>Enviando...</p> : null}
-                    {msg ? <p>{msg}</p> : null}
+
                     <p className="acciones"><input type="submit" value="Enviar" />
                     </p>
                 </form>
+                {sending ? <p>Enviando...</p> : null}
+                {msg ? <p>{msg}</p> : null}
 
             </div>
             <div className="datos">
